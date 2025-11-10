@@ -1,0 +1,13 @@
+Flask
+numpy
+pandas
+scikit-learn
+feature-engine
+joblib
+gunicorn
+flask-wtf
+WTForms
+```
+Flask-Bootstrap
+
+```

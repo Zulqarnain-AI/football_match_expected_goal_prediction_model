@@ -81,6 +81,3 @@ class MatchForm(FlaskForm):
         validators=[DataRequired()]
     )
     Submit=SubmitField('Predict')
-""" time	comp	round		venue	opponent
-captain	referee	match report	sot	fk	pk	
-pkatt	season	team"""

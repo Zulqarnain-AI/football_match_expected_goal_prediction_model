@@ -16,11 +16,12 @@ def home():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     form = MatchForm()
+    message = None
     if form.validate_on_submit():
 
         
         x_new = pd.DataFrame({
-            'time': [form.time.data.strftime('%H:%M')],
+            'time': [form.time.data.strftime('%H:%M')],#type: ignore
             'comp': [form.comp.data],
             'round': [form.round.data],
             'day': [form.day.data],
@@ -44,9 +45,10 @@ def predict():
         })
         # Predict
         prediction = model.predict(x_new)[0]
-        return f"Predicted Expected Goals: {prediction:.2f}"
+        message = f"Predicted Expected Goals: {prediction:.2f}"
+        return render_template('predict.html', title='Predict Match', form=form, message=message)
 
-    return render_template('predict.html', title='Predict Match', form=form)
+    return render_template('predict.html', title='Predict Match', form=form, message=message)
 
 if __name__ == '__main__':
     app.run(debug=True)
