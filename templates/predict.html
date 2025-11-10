@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Match Prediction Form</h2>
+    <form action="" method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            <div>
+                {{ form.time.label(class="form-label") }}
+                {{ form.time(class="form-control") }}
+
+            </div>
+            <div>
+                {{ form.comp.label(class="form-label") }}
+                {{ form.comp(class="form-control") }}
+            </div>
+            <div>
+                {{ form.round.label(class="form-label") }}
+                {{ form.round(class="form-control") }}
+            </div>
+            <div>
+                {{ form.day.label(class="form-label") }}
+                {{ form.day(class="form-control") }}
+            </div>
+            <div>
+                {{ form.venue.label(class="form-label") }}
+                {{ form.venue(class="form-control") }}
+            </div>
+            <div>
+                {{ form.opponent.label(class="form-label") }}
+                {{ form.opponent(class="form-control") }}
+            </div>
+            <div>
+                {{ form.captain.label(class="form-label") }}
+                {{ form.captain(class="form-control") }}
+            </div>
+            <div>
+                {{ form.referee.label(class="form-label") }}
+                {{ form.referee(class="form-control") }}
+            </div>
+            <div>
+                {{ form.match_report.label(class="form-label") }}
+                {{ form.match_report(class="form-control") }}
+            </div>
+            <div>
+                {{ form.sot.label(class="form-label") }}
+                {{ form.sot(class="form-control") }}
+            </div>
+            <div>
+                {{ form.fk.label(class="form-label") }}
+                {{ form.fk(class="form-control") }}
+            </div>
+            <div>
+                {{ form.pk.label(class="form-label") }}
+                {{ form.pk(class="form-control") }}
+
+            </div>
+            <div>
+                {{ form.pkatt.label(class="form-label") }}
+                {{ form.pkatt(class="form-control") }}
+            </div>
+            <div>
+                {{ form.season.label(class="form-label") }}
+                {{ form.season(class="form-control") }}
+            </div>
+            <div>
+                {{ form.team.label(class="form-label") }}
+                {{ form.team(class="form-control") }}
+            </div>
+            <div class="mt-3">
+                {{ form.Submit(class="btn btn-primary") }}
+            </div>
+        </div> 
+    </form>
+</div>
+{% endblock %}
