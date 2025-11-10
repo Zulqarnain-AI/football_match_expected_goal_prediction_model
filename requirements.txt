@@ -6,8 +6,5 @@ feature-engine
 joblib
 gunicorn
 flask-wtf
-WTForms
-```
-Flask-Bootstrap
-
-```
+wtforms
+flask-bootstrap
